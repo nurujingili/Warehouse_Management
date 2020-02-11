@@ -1,0 +1,14 @@
+{% extends 'warehouse/product/products_list.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>New Order</h1>
+    <form method="POST" class="OrderForm">{% csrf_token %}
+    {{ form|crispy }}
+
+<button type="submit" class="btn btn-success">Save</button>
+
+    </form>
+
+
+{% endblock %}

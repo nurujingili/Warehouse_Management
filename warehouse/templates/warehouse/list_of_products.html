@@ -1,0 +1,40 @@
+{% extends 'warehouse/index.html' %}
+{% load static %}
+{% block content %}
+
+    <h2>List of products</h2>
+
+  <table>
+  <tr>
+    <th>Product name</th>
+    <th>Product ID</th>
+    <th>Unit Price</th>
+    <th>Category</th>
+    <th>Supplier</th>
+    <th>Units in sctock</th>
+    <th>Units in order</th>
+    <th>Quantyity per unit</th>
+    <th>Discontinued</th>
+
+  </tr>
+    {% for product in product_list %}
+
+  <tr>
+    <td>{{product.productName}}</td>
+    <td>{{ product.productID }}</td>
+    <td>{{ product.unitPrice }}</td>
+    <td>{{ product.categoryID}}</td>
+    <td>{{ product.supplierID}}</td>
+    <td>{{ product.unitsInStock}}</td>
+    <td>{{ product.unitOnOrder}}</td>
+    <td>{{ product.quantityPerUnit}}</td>
+    <td>{{product.discontinued}}</td>
+  </tr>
+ {% endfor %}
+</table>
+
+
+{% endblock %}
+
+
+

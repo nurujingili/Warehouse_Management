@@ -1,0 +1,41 @@
+{% extends 'warehouse/index.html' %}
+{% block content %}
+
+
+
+<h2>O{{order.orderID}}</h2>
+<table>
+    <tr>
+  <tr>
+    <td>Order Id:</td>
+    <td>{{order.orderID}}</td>
+  </tr>
+  <tr>
+    <td>Quantity:</td>
+    <td>{{ order.quantity }}</td>
+  </tr>
+  <tr>
+    <td>Price:</td>
+    <td>{{ order.unitPrice }}</td>
+  </tr>
+  <tr>
+     <td>Product</td>
+     <td>{{ order.productID  }}
+  </tr>
+    <tr>
+    <td>Unit Price</td>
+    <td>{{ order.unitPrice }}</td>
+    </tr>
+    <tr>
+    <td>Units on Order</td>
+     <td>{{ order.unitsOnOrder}}</td>
+    </tr>
+    <tr>
+    <td>Discount</td>
+     <td>{{order.discount}}</td>
+    </tr>
+</table>
+
+
+
+{% endblock %}

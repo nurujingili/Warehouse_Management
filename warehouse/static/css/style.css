@@ -1,0 +1,74 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #4d758d;
+  overflow: hidden;
+  float: inside;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: aliceblue;
+  font-size: 20px;
+  margin-left:auto;
+  margin-right:auto;
+  border-collapse: collapse;
+  width: 83%;
+  font-family: Cochin;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: inside;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Cochin;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #84adc5;
+  color: #f2f2f2;
+  text-underline: #f2f2f2;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+    text-emphasis: #84adc5;
+    background: #84adc5;
+}
+
+
+table {
+  margin-left:auto;
+  margin-right:auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  text-align: justify;
+  padding: 8px;
+  color: #4d758d
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #84adc5;
+  color: white;
+}
+h2{
+  text-align: center;
+  color: #4d758d;
+  padding-bottom: 20px;
+}
+h1{
+  text-align: center;
+  color: #4d758d;
+  padding-bottom: 20px;
+}

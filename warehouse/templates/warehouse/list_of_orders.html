@@ -1,0 +1,36 @@
+{% extends 'warehouse/index.html' %}
+
+{% block content %}
+
+
+    <h2>List of orders</h2>
+     <table>
+  <tr>
+    <th>Order ID</th>
+    <th>Slug</th>
+    <th>Product</th>
+    <th>Unit Price</th>
+    <th>Quantity</th>
+    <th>Discount</th>
+  </tr>
+     {% for order in list_of_orders %}
+         <tr>
+            <td>{{order.orderID }}</td>
+            <td><a href="{% url 'warehouse:detail' order.slug %}" >{{ order.slug }}</a></td>
+            <td>{{ order.productID  }}</td>
+            <td>{{ order.unitPrice }}</td>
+            <td>{{ order.quantity}}</td>
+            <td>{{order.discount}}</td>
+           {% endfor %}
+         </tr>
+
+     </table>
+
+
+
+{% endblock %}
+
+
+
+
+

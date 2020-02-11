@@ -1,0 +1,28 @@
+{% extends 'warehouse/index.html' %}
+{% block title %}List of Categories{% endblock %}
+{% block content %}
+
+
+    <h2>List of Categories</h2>
+     <table>
+  <tr>
+    <th>Category name</th>
+    <th>Category ID</th>
+    <th>Description</th>
+    <th>Picture</th>
+
+  </tr>
+    {% for category in category_list %}
+
+  <tr>
+    <td>{{category.categoryName}}</td>
+    <td>{{ category.categoryID }}</td>
+    <td>{{category.description}}</td>
+    <td><img src=" {{category.picture.url}}" width="180"></td>
+
+
+  </tr>
+ {% endfor %}
+</table>
+{% endblock %}
+

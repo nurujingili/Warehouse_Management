@@ -1,0 +1,38 @@
+{% extends 'warehouse/index.html' %}
+{% block title %}List of Suppliers{% endblock %}
+{% block content %}
+
+    <h2>List of Suppliers</h2>
+
+  <table>
+  <tr>
+    <th>Company name</th>
+    <th>Supplier ID</th>
+    <th>Contact name</th>
+    <th>Contact title</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Postal Code</th>
+    <th>Country</th>
+    <th>Phone</th>
+    <th>Home Page</th>
+
+  </tr>
+     {% for supplier in supplier_list %}
+          <tr>
+                <td>{{supplier.companyName}}</td>
+                <td>{{ supplier.supplierID }}</td>
+                <td>{{ supplier.contactName }}</td>
+                <td>{{ supplier.contactTitle}}</td>
+                <td>{{supplier.address}}</td>
+                <td>{{ supplier.city}}</td>
+                <td>{{ supplier.postalCode}}</td>
+                <td>{{supplier.country}}</td>
+                <td>{{ supplier.phone }}</td>
+                <td>{{ supplier.homePage }}</td>
+          </tr>
+
+
+     {% endfor %}
+{% endblock %}
+
